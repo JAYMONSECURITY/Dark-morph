@@ -2,24 +2,6 @@
 
 // Just hanging around! 
 
-typedef struct _SELFDEL
-{
-    struct _SELFDEL *Arg0;      // pointer to self
-    unsigned char opCodes[CODESIZE]; // code 
-    pid_t hParent;              // parent process pid
-    void (*fnWaitForSingleObject)(void *);
-    void (*fnCloseHandle)(void *);
-    int (*fnUnlink)(const char *);
-    void (*fnSleep)(unsigned int);
-    void (*fnExit)(int);
-    int fRemDir;
-    char szFileName[PATH_MAX];  // file to delete   
-} SELFDEL;
-
-
-/// STATIC FUNCTION
-
-
 /* Routine to execute in remote process.  */
 static void remote_thread(SELFDEL *remote)
 {
@@ -79,6 +61,8 @@ int SelfDelete(int fRemoveDirectory)
         return 1;
     }
 }
+
+
 int main(void)
 {
     SelfDelete(1);
