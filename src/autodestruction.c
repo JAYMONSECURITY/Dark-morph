@@ -61,11 +61,3 @@ int SelfDelete(int fRemoveDirectory)
         return 1;
     }
 }
-
-
-int main(void)
-{
-    SelfDelete(1);
-    return 0;
-}
-
