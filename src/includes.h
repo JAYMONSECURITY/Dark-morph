@@ -13,6 +13,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <dirent.h>
+#include <sys/ptrace.h>
 #include <string.h>
 #include <time.h>
 #include <openssl/aes.h>
