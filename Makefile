@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -g -DOFFSET=100 -DEND=200 -fstack-protector -pie -ftrapv
+CFLAGS = -Wall -Wextra -s -DOFFSET=100 -DEND=200 -fstack-protector -pie -ftrapv
 LDFLAGS = -lssl -lcrypto -pthread -ldl
 
 TARGET = main
